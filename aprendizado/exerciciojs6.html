@@ -26,9 +26,9 @@
 
         function calcular(){
             //As variáveis declaradas dentro da função, podem ser usadas somente dentro dela
-            let peso = window.document.getElementById('peso')
-            let altura = window.document.getElementById('altura')
-            let resultado = window.document.getElementById('resultado')
+            let peso = window.document.getElementById('peso').value
+            let altura = window.document.getElementById('altura').value
+            let resultado = window.document.getElementById('resultado').value
             let n1 = Number(altura.value)
             let n2 = Number(peso.value)
             let imc = n2 / (n1*n1)

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com CSS em JavaScript</title>
+</head>
+
+<body>
+    <h1 id="titulo">Trabalhando com CSS em JavaScript</h1>
+    <button onclick="document.getElementById('titulo').style.color = 'red'">
+        <p>Alterar a cor do título</p>
+    </button>
+    <p id="paragrafo">Texto com algum tipo de destaque</p>
+    <button onclick="document.getElementById('paragrafo').style.color = 'pink'">
+        <p>Alterar a cor do Parágrafo</p>
+    </button>
+    <p id="paragrafo2">Texto com muito destaque</p>
+    <table>
+        <tr>
+            <button onclick="document.getElementById('paragrafo2').style.fontSize = '50px'">
+                <p>alterar o tamanho da fonte</p>
+            </button>
+            <button onclick="document.getElementById('paragrafo2').style.fontFamily = 'Courier New'">
+                <p>Alternar fonte</p>
+            </button>
+            <hr>
+            <p id="texto">Texto desenvolvido por um clique</p>
+            <button onclick="document.getElementById('texto').innerHTML = 'Texto transformado'">
+                <p>Clique aqui</p>
+            </button>
+
+                <p> 
+                    
+                    <button onclick="document.getElementBy('acesa').src='img/luz.jpg'">Ligar</button>
+
+                    <button onclick="document.getElementBy('acesa').style.display = 'nome'">Ocultar</button>
+
+                    <button onclick="document.getElementBy('acesa').style.display = ''">Mostrar</button>
+
+                    <button onclick="document.getElementBy('acesa').src='img/apagada.jpg'">Apagar</button>
+                </p>
+            <p><img id="acesa" src="img/luz.jpg" alt=""></p>
+            <script src="/acoes.js"></script>
+
+</body>
+
+</html>

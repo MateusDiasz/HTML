@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Cadastro</title>
+
+</head>
+
+<body>
+    <h1>Cadastrar Colaborador</h1>
+    <p>
+    <p>
+        <label for="nome">Nome:</label>
+        <input required type="text" id="nome">
+    </p>
+    <p>
+        <label for="idade">Idade:</label>
+        <input required type="text" id="idade">
+    </p>
+    <p>
+        <label for="cargo">Cargo:</label>
+        <input required type="text" id="cargo">
+    </p>
+    <p>
+        <label for="salario">Salário:</label>
+        <input required type="text" id="salario">
+    </p>
+    <button id="salvar" onclick="resultado()">Salvar</button>
+
+    <h1>Ficha do Colaborador</h1>
+    <table id="tabela">
+        <div>
+            <p>Nome completo:</p>
+            <p id="aparecerNome"></p>
+        </div>
+        <div>
+            <p>Idade</p>
+            <p id="aparecerIdade"></p>
+        </div>
+        <div>
+            <p>Salário</p>
+            <p id="aparecerSalario"></p>
+        </div>
+        <div>
+            <p>Cargo</p>
+            <p id="aparecerCargo"></p>
+        </div>
+    </table>
+    <script>
+        function resultado() {
+            let colaborador = window.document.getElementById('nome')
+            let Idade = window.document.getElementById('idade').value
+            let Cargo = window.document.getElementById('cargo').value
+            let Salario = window.document.getElementById('salario')
+
+            document.getElementById('aparecerNome').innerHTML = nome.value
+            document.getElementById('aparecerIdade').innerHTML = idade.value
+            document.getElementById('aparecerSalario').innerHTML = salario.value
+            document.getElementById('aparecerCargo').innerHTML = cargo.value
+        }
+    </script>
+
+</body>
+
+</html>
