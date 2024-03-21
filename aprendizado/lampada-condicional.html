@@ -10,34 +10,50 @@
 <body>
     <div id="container"></div>
     <h1>Acende a Lampada</h1>
+   
+   
     <img src="img/apagada.jpg" id="luz" alt="Lampada Apagada" onmousemove="mudarLampada(1)" onmouseout="mudarLampada(2)"
-        onclick="mudarLampada(3)" />
+        onclick="mudarLampada(3)"/>
+
+       
+    
+
     <script>
 
         let quebrada = false;
+        let audioAcender = ('/audio/interruptor.mp3')
+        let audioQuebrou = ('/audio/lampadaquebrada.mp3')
         function mudarLampada(tipo) {
 
             //se o meu tipo for == a 1 então a lampada acende
             if (tipo == 1) {
                 arquivo = "img/luz.jpg"
+               
             }
 
+             //se o meu tipo for == a 2 então a lampada apaga
             if (tipo == 2) {
-                //se o meu tipo for == a 2 então a lampada apaga
+               
                 arquivo = "img/apagada.jpg"
+                document.getElementById('audioAcender')
+                
+               
             }
 
             //se o meu tipo for == a 3 então a lampada quebra
             if (tipo == 3) {
-                arquivo = "img/quebrada.jpg" 
+                arquivo = "img/quebrada.jpg"
+               
             }
             if (!quebrada) {
-                    document.getElementById('luz').src = arquivo;
-                    if (tipo == 3) {
-                        quebrada = true;
-                    }
+                document.getElementById('luz').src = arquivo;
+                if (tipo == 3) {
+                    quebrada = true;
                 }
-        }
+            }
+
+           
+        } 
     </script>
 </body>
 
