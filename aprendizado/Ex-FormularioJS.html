@@ -10,7 +10,7 @@
 <body>
     <h1>Formulário de contato</h1>
     <p>
-    <form action="#">
+    <form action="#" id="meuFormulario">
         <label for="Nome Completo"></label>
         <input required type="tel" id="NomeCompleto" name="Nome" placeholder="Nome Completo" itemid="nomeCompleto">
         </p>
@@ -30,32 +30,44 @@
         <button onclick="resultado()" id="enviar">Enviar</button>
     </form>
     <h1>Lista de Contatos (Recebidos)</h1>
-    <table border="1">
+    <table border="1" id="tabela">
         <tr>
             <td>Nome Completo:</td>
-            <td></td>
+            <td id="n1"></td>
         </tr>
         <tr>
             <td>E-mail:</td>
-            <td></td>
+            <td id="n2"></td>
         </tr>
         <tr>
             <td>Telefone</td>
-            <td></td>
+            <td id="n3"></td>
         </tr>
         <tr>
             <td>Assunto:</td>
-            <td></td>
+            <td id="n4"></td>
         </tr>
         <tr>
             <td>Mensagem:</td>
-            <td></td>
+            <td id="n5"></td>
         </tr>
     </table>
     <script>
-        
-      
-        
+        function resultado(){
+            let formulario = document.getElementById('meuFormulario')
+            let nome = formulario.elements["nomeCompleto"].value //pegar os valores que estão no meu input
+            let Email = formulario.elements["E-mail"].value
+            let telefone = formulario.elements["Telefone"].value
+            let assunto = formulario.elements["Assunto"].value
+            let mensagem = formulario.elements["Mensagem"].value
+            if(nome !==""&& email !=="" && telefone !=="" && assunto !=="" && mensagem !==""){
+            //verificação dos campos vazios
+            n1.innerHTML
+            }
+            else{
+                alert("Por favor, preencha todos os campos antes de salvar.")
+            }
+        }
     </script>
 </body>
 
