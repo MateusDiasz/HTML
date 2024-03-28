@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Exercicio de Condicional</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .tabela {
+            margin: 0 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Condicionais</h1>
+    <h2>Ex1 - Numeros impares e pares</h2>
+    <div class="container">
+        <form id="form">
+            <label for="numero">Digite um Numero:</label>
+            <br>
+            <input type="number" id="num8">
+            <button type="button" onclick="resultadoNumeros()">Verificar</button>
+        </form>
+    </div>
+    <br><br>
+
+    <div class="tabela">
+        <table border="1" id="tabela">
+            <thead>
+                <th>Resultado</th>
+
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        function resultadoNumeros() {
+
+
+            let impar = "numero" / 2 % 1
+            let par = "numero" / 2 % 0
+            let result1 = "Este numero é impar"
+            let result2 = "Este numero é par"
+
+            if (par !== "" && impar !== "") {
+                let tabela = document.getElementById("tabela").getElementsByTagName('tbody')[0]
+                let novaLinha = tabela.insertRow(tabela.rows.length)
+                let colunaNumero = novaLinha.insertCell(0)
+                colunaNumero.innerHTML = result1
+                colunaNumero.innerHTML = result2
+
+                formulario.reset()
+
+            } else {
+                alert("Por favor, preencha todos os campos antes de verificar")
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
