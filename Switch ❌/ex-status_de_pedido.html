@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Status do Pedido</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f0d53b;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d6ae0d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Verificar Status do Pedido</h2>
+    <button onclick="gerarNumeroAleatorio()">Ver Protocolo</button>
+    <div id="numeroAleatorio"></div>
+    <div id="statusPedido"></div>
+</div>
+
+<script>
+    
+    function gerarNumeroAleatorio() {
+    let numeroAleatorio = Math.floor(Math.random() * 9000) + 1000;
+    let statusPedido;
+
+    if (numeroAleatorio >= 8000) {
+        statusPedido = "Pedido entregue";
+    } else if (numeroAleatorio >= 5000) {
+        statusPedido = "Pedido em separação";
+    } else {
+        statusPedido = "Aguardando pagamento";
+    }
+
+    let numeroRastreio = document.getElementById("numeroAleatorio");
+    numeroRastreio.textContent = "Número de Ratreio: " + numeroAleatorio;
+    
+    let statusPedidoElement = document.getElementById("statusPedido");
+    statusPedidoElement.textContent = "Status do Pedido: " + statusPedido;
+}
+</script>
+</body>
+</html>

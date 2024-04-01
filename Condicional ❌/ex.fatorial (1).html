@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Fatorial</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+
+<h2>Calculadora de Fatorial</h2>
+
+<label for="numero">Digite um número:</label>
+<input type="number" id="numero" min="0">
+<button onclick="calcularFatorial()">Calcular Fatorial</button>
+
+<div id="resultado"></div>
+
+<script>
+function calcularFatorial() {
+    var numero = parseInt(document.getElementById("numero").value);
+
+    if (isNaN(numero)) {
+        mostrarResultado("Por favor, insira um número válido.");
+        return;
+    }
+
+    if (numero < 0) {
+        mostrarResultado("Por favor, insira um número não negativo.");
+        return;
+    }
+
+    var fatorial = 1;
+    for (var i = 2; i <= numero; i++) {
+        fatorial *= i;
+    }
+
+    mostrarResultado("O fatorial de " + numero + " é " + fatorial + ".");
+}
+
+function mostrarResultado(resultado) {
+    document.getElementById("resultado").innerText = resultado;
+}
+</script>
+
+</body>
+</html>

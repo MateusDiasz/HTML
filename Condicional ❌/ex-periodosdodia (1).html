@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodos do Dia</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        h1{
+            background-color: rgb(87, 195, 182);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+
+        h2 {
+            background-color: rgb(88, 191, 152);
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+#resultado{
+    background-color: rgb(181, 219, 252);
+}
+
+        div {
+            background-color: rgb(87, 111, 133);
+            font-size: 15px;
+            color: white;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(131, 228, 199);
+            border: 0;
+            border-radius: 10px;
+            position: relative;
+            bottom: -10px;
+        }
+
+        input {
+            border-radius: 5px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Períodos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #resultado {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div>
+    <h1>Verificando Periodos</h1>
+    <label for="horario">Escolha um horário:</label>
+    <br>
+    <input type="time" id="horario" name="horario">
+    <br>
+    <button onclick="verificarPeriodo()">Verificar Período</button>
+    <div id="resultado"></div>
+</div>
+    
+    <script>
+    function verificarPeriodo() {
+        let horarioSelecionado = document.getElementById("horario").value;
+        let horaAtual = new Date("2024-01-01T" + horarioSelecionado + ":00").getHours();
+    
+
+        let manhaInicio = 4;    
+        let manhaFim = 12;      
+        let tardeInicio = 12;   
+        let tardeFim = 18;      
+        let noiteInicio = 18;   
+        let noiteFim = 3;    
+    
+        if (horaAtual >= manhaInicio && horaAtual < manhaFim) {
+            mostrarResultado("Manhã");
+        } else if (horaAtual >= tardeInicio && horaAtual < tardeFim) {
+            mostrarResultado("Tarde");
+        } else {
+            mostrarResultado("Noite");
+        }
+    }
+    
+    function mostrarResultado(periodo) {
+        document.getElementById("resultado").innerText = "Período: " + periodo;
+    }
+    </script>
+    
+    </body>
+    </html>
+</body>
+</html>
