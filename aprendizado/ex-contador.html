@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrementos</title>
+</head>
+
+<body>
+    <div>
+        <h1>contador</h1>
+        <p id="contador"></p>
+        <button id="decrement">DECREMENTAR</button>
+        <button id="reset">RESETAR</button>
+        <button id="increment">INCREMENTAR</button>
+    </div>
+    <script>
+       let result = document.getElementById('contador')
+
+    
+
+       let acrecentar = document.getElementById('increment')
+       let decrescenta = document.getElementById('decrement')
+       let contador = document.getElementById('contador')
+
+
+       function increment (numero){
+       contador++
+       }
+
+       function decrement (numero){
+       contador--
+       }
+
+       function reset (numero){
+       contador = 0
+       }
+       
+    </script>
+</body>
+
+</html>

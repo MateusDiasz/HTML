@@ -53,12 +53,42 @@ body{
     color: #222;
     margin-bottom: 15px;
 }
+h1{
+    padding: 20px;
+    
+    
+}
+
+#contatos h3{
+    color: white;
+}
 
 .dados-label{
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
+#formulario{
+    background-color: #282a27;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    left: -50px;
+    
+}
+
+#formulario h3{
+    color: white;
+    
+}
+
+#formulario button{
+    background-color: rgb(93, 182, 214);
+    padding: 15px;
+    width: 80px;
+}
+
 
 .dados-label:nth-of-type(1),
 .dados-label:nth-of-type(2),
